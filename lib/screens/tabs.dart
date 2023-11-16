@@ -11,10 +11,21 @@ class TabsScreen extends ConsumerStatefulWidget {
 }
 
 class _TabsScreenState extends ConsumerState<TabsScreen> {
+  var activePage = ListView(children: [
+    Row(
+      children: [
+        Column(
+          children: [Text("kwadrat")],
+        )
+      ],
+    ),
+  ]);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Your Groceries")),
+      body: activePage,
     );
   }
 }
